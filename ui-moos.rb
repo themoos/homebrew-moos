@@ -15,6 +15,11 @@ class UiMoos < Formula
     
     def install
         cmake_args = std_cmake_parameters.split
+        cmake_args << "-DBUILD_GRAPHICAL_TOOLS:BOOL=ON"
+        cmake_args << "-DBUILD_UMS:BOOL=ON"
+        cmake_args << "-DBUILD_UPB:BOOL=ON"
+        cmake_args << "-DBUILD_UPBINDEXED:BOOL=ON"
+        
         system "cmake", ".", *cmake_args
         system "make"
         system "make install"
