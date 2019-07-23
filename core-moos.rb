@@ -13,7 +13,7 @@ class CoreMoos < Formula
     
     
     def install
-        cmake_args = std_cmake_args.split
+        cmake_args = std_cmake_args
         
         cmake_args << "-DUSE_AYSNC_COMMS:BOOL=ON"
         
