@@ -12,7 +12,7 @@ class EssentialMoos < Formula
     
 
   def install
-      cmake_args = std_cmake_parameters.split
+      cmake_args = std_cmake_args
       system "cmake", ".", *cmake_args
       system "make"
       system "make install"
